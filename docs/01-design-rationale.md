@@ -26,4 +26,4 @@
 * **Protection Pipeline:** TVS surge clamping, P-MOSFET reverse-polarity protection, and input LC filtering prevent field wiring damage and RF interference.
 ---
 
-## Internal Sensors [see ./specifications/02-internal-sensors.md]
+## Internal Sensors [see ./specifications/02-internal-sensors-ics.md]

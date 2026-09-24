@@ -17,7 +17,7 @@ The **ISTeN-1** is an industrial-grade field node designed for remote agricultur
                                +-----------------------------+  |
                                                                 |
                                +-----------------------------+  |    +---------------------------+
-                               |     Remote Nodes (LoRa)     |--+--->|   STM32 Microcontroller   |--+---> [ SIM7080G Cellular / GNSS ] ---> Cloud
+                               |     Remote Nodes (LoRa)     |--+--->|   STM32 Microcontroller   |--+--->     [ Cellular / GNSS ]      ---> Cloud
                                +-----------------------------+       +---------------------------+  |
                                                                                    |                +---> [ SPI Flash / Local Buffer ]
                                                                                    |
@@ -36,19 +36,19 @@ The **ISTeN-1** is an industrial-grade field node designed for remote agricultur
 * **System Watchdog:** Dedicated hardware supervisor for automated fault recovery.
 
 ### 2. Wireless Connectivity & Location
-* **Cellular IoT:** SIMCom SIM7080G supporting NB-IoT and LTE-M with 2G fallback.
-* **Sub-GHz Radio:** Semtech SX1262 LoRa transceiver for long-range, line-of-sight communication with off-grid field nodes.
+* **Cellular IoT:** RF IC (e.g. SIMCom SIM7080G) supporting NB-IoT and LTE-M with 2G fallback.
+* **Sub-GHz Radio:** LoRa transceiver (e.g. Semtech SX1262) for long-range, line-of-sight communication with off-grid field nodes.
 * **GNSS / Positioning:** Integrated multi-constellation GPS/GLONASS positioning for geotagging and anti-theft asset tracking.
 
 ### 3. Industrial Wired Interfaces
-* **SDI-12 Bus:** Bi-directional interface supporting commercial multi-depth soil moisture probes (AquaCheck, DFM).
+* **SDI-12 Bus:** Bi-directional interface supporting commercial multi-depth soil moisture probes (e.g. AquaCheck, DFM).
 * **RS-485 Modbus RTU:** Isolated differential serial interface with TVS surge protection for weather stations, flow meters, and VFDs.
 * **Power-Gated Sensor Rail:** Switched $12\text{V}$ boost regulator supplying power to external probes only during sampling windows.
 
 ### 4. Power & Battery Management
-* **Solar Input:** Onboard Maximum Power Point Tracking (MPPT) buck charger operating from solar panels.
+* **Solar Input:** Onboard Maximum Power Point Tracking (MPPT) charger operating from solar panels.
 * **Battery Chemistry:** High-thermal-stability $3.2\text{V}$ Lithium Iron Phosphate (LiFePO4) battery.
-* **Power Profiling:** Ultra-low standby current ($<15\,\mu\text{A}$) in deep-sleep mode; onboard current monitoring via INA219.
+* **Power Profiling:** Ultra-low standby current ($<15\,\mu\text{A}$) in deep-sleep mode; onboard current monitoring via current sensor.
 
 ### 5. Onboard Diagnostics & Security
 * **Motion & Anti-Theft:** Low-power 3-axis accelerometer with configurable interrupt flags for tilt/movement detection.

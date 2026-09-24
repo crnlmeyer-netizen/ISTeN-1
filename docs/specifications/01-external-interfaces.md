@@ -9,16 +9,16 @@
 | :--- | :---: | :--- | :--- | :--- |
 | **SDI-12 Port** | 3 | `12V`, `DATA`, `GND` | $+12\text{V}$ Switched, $0\text{--}5\text{V}$ Logic | Bi-directional multi-drop telemetry for soil probes. |
 | **RS-485 Port** | 4 | `12V`, `A`, `B`, `GND` | $+12\text{V}$ Switched, Differential $A/B$ | Modbus RTU communication for pumps, VFDs, and weather stations. |
-| **Solar Input** | 2 | `V+`, `V-` | $+6.0\text{V}$ to $+24.0\text{V DC}$ | Solar panel input feeding the internal MPPT LiFePO4 buck charger. |
+| **Solar Input** | 2 | `V+`, `V-` | $+6.0\text{V}$ to $+24.0\text{V DC}$ | Solar panel input feeding the internal MPPT LiFePO4 charger. |
 
 ### 1.2 On-Board RF Interfaces
 * **Connector Type:** Surface-mount Male U.FL connectors ($50\,\Omega$ characteristic impedance).
 
 | Port | Signal / Protocol | Frequency Band | RF Routing Notes |
 | :--- | :--- | :--- | :--- |
-| **RF_CELL** | LTE-M / NB-IoT | $700\text{ MHz} \text{--} 2100\text{ MHz}$ | Driven by SIM7080G main antenna output. |
-| **RF_GNSS** | Active GPS / GNSS | $1575.42\text{ MHz}$ (L1 Band) | Driven by SIM7080G GNSS port with active DC bias. |
-| **RF_LORA** | Sub-GHz LoRa | $868\text{ MHz}$ / $915\text{ MHz}$ | Driven by SX1262 transceiver output via matching network. |
+| **RF_CELL** | LTE-M / NB-IoT | $700\text{ MHz} \text{--} 2100\text{ MHz}$ | Driven by IC main antenna output. |
+| **RF_GNSS** | Active GPS / GNSS | $1575.42\text{ MHz}$ (L1 Band) | Driven by IC GNSS port with active DC bias. |
+| **RF_LORA** | Sub-GHz LoRa | $868\text{ MHz}$ / $915\text{ MHz}$ | Driven by IC transceiver output via matching network. |
 
 ---
 
